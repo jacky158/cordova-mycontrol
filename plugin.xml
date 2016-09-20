@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="younetco-support-mycontrol" version="0.2.3">
+    <name>MyControl</name>
+    <description>Cordova MyControl</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova mycontrol</keywords>
+    <js-module src="www/android/mycontrol.js" name="mycontrol">
+        <clobbers target="window.MyControl" />
+    </js-module>
+    <platform name="android">
+        <config-file target="config.xml" parent="/*">
+            <feature name="MyControl">
+                <param name="android-package" value="com.younetco.support.MyControlPlugin"/>
+            </feature>
+        </config-file>
+        <source-file src="src/android/MyControlPlugin.java" target-dir="src/com/younetco/support" />
+    </platform>
+</plugin>
